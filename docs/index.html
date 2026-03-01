@@ -51,7 +51,7 @@
         <div class="btn-container">
           <button
             class="btn btn-color-2"
-            onclick="window.open('./assets/CSResume.pdf')"
+            onclick="window.open('./assets/CS_FINALIZED_RESUME.pdf')"
           >
             Download Resume
           </button>
@@ -278,12 +278,20 @@
               />
             </div>
             <h2 class="experience-subtitle project-title">Redis Clone</h2>
-            <div class="btn-container">
+            <div class="btn-container project-actions">
               <button
                 class="btn btn-color-2 project-btn"
                 onclick="window.open('https://github.com/daev1005/redis-clone')"
               >
                 GitHub
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="openLearnPopup('Redis Clone', 
+                'This was my first time being exposed to using python and was what introduced me to how multiple clients communicate in a server.' +
+                'Also learned about key-value design, basic command parsing, and how persistence tradeoffs affect performance.')"
+              >
+                What I Learned
               </button>
             </div>
           </div>
@@ -296,12 +304,21 @@
               />
             </div>
             <h2 class="experience-subtitle project-title">Healthy Huskies</h2>
-            <div class="btn-container">
+            <div class="btn-container project-actions">
               <button
                 class="btn btn-color-2 project-btn"
                 onclick="window.open('https://github.com/daev1005/healthy-huskies')"
               >
                 GitHub
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="openLearnPopup('Healthy Huskies', 
+                'As a group, this project introduced me to React and also learned to use Supabase as my database originally. ' +
+                'Afterwards, it was just me, so I decided to continue to upgrade it and make it better by adding more features such as: ' +
+                'user authentication, rebuilt the backend myself to understand and control the system end-to-end, and a more intuitive UI.')"
+              >
+                What I Learned
               </button>
             </div>
           </div>
@@ -310,12 +327,18 @@
               <img src="./assets/ARA.png" alt="Project 3" class="project-img" />
             </div>
             <h2 class="experience-subtitle project-title">AI Resume Analyzer</h2>
-            <div class="btn-container">
+            <div class="btn-container project-actions">
               <button
                 class="btn btn-color-2 project-btn"
                 onclick="window.open('https://github.com/daev1005/AI-Resume-Analyzer')"
               >
                 GitHub
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="openLearnPopup('AI Resume Analyzer', 'One of my first introductions to using APIs, and learning to integrate AI-powered text analysis into an application workflow, handle prompt and response behavior, and present generated insights in a way that feels practical to users.')"
+              >
+                What I Learned
               </button>
             </div>
           </div>
@@ -367,8 +390,22 @@
           </ul>
         </div>
       </nav>
-      <p>Copyright &#169; 2025 David Li. All Rights Reserved.</p>
+      <p>Copyright &#169; 2026 David Li. All Rights Reserved.</p>
     </footer>
+
+    <div class="learn-modal" id="learn-modal" aria-hidden="true">
+      <div class="learn-modal-backdrop" onclick="closeLearnPopup()"></div>
+      <div
+        class="learn-modal-content"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="learn-modal-title"
+      >
+        <h3 id="learn-modal-title">What I Learned</h3>
+        <p id="learn-modal-body"></p>
+        <button class="btn btn-color-1" onclick="closeLearnPopup()">Close</button>
+      </div>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
