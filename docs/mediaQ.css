@@ -5,7 +5,7 @@
 
     }
 
-    .about-containers {
+    .abt-containers {
         flex-wrap: wrap;
     }
 
@@ -24,7 +24,7 @@
         margin-top: 2rem;
     }    
     #profile, .section-container {
-        display: block
+        display: block;
     }
 
     .arrow {
@@ -48,11 +48,15 @@
     .section_pic_container {
         margin-bottom: 2rem;
         height: 225px;
-        position: center;
     }
 
     .abt-containers {
         margin-top: 0;
+    }
+
+    #project .details-containers {
+        flex-basis: calc((100% - 2rem) / 2);
+        max-width: calc((100% - 2rem) / 2);
     }
 }
 
@@ -106,5 +110,10 @@
     .text-container {
         padding: 0 1rem;
         text-align: justify;
+    }
+
+    #project .details-containers {
+        flex-basis: 100%;
+        max-width: 100%;
     }
 }

@@ -232,6 +232,7 @@ section {
 }
 
 .abt-containers {
+    flex-wrap: wrap;
     gap: 2rem;
     margin-bottom: 2rem;
     margin-top: 2rem;
@@ -318,6 +319,17 @@ article {
 /* project*/
 #project {
     position: relative;
+}
+
+#project .abt-containers {
+    justify-content: center;
+    align-items: stretch;
+}
+
+#project .details-containers {
+    flex: 0 1 calc((100% - 4rem) / 3);
+    max-width: calc((100% - 4rem) / 3);
+    box-sizing: border-box;
 }
 
 .color-container {
